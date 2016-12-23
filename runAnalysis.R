@@ -81,8 +81,8 @@ colnames(ds_col_need) <- col_names
 ds_mean <- aggregate(ds_col_need[, names(ds_col_need) != c("activity", "subject")], by=list(activity=ds_col_need$activity, subject=ds_col_need$subject), FUN=mean)
 
 # write ds_mean to a file
-write.table(ds_mean, "./tidy_data.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+write.table(ds_mean, "./tidy_data.txt", sep = " ", quote = FALSE, row.names = FALSE)
 
-# clean temporary data
+# Retain data sets ds_col_need and ds_main. Clean other temporary data 
 rm(list=c("col_names", "v_col_need", "ds_comb", "ds_test", "ds_trn", "y_test", "x_test"))
 rm(list=c("sub_test", "y_trn", "x_trn", "sub_trn", "feature", "act_lbl"))
