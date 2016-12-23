@@ -1,0 +1,91 @@
+
+The tidy_data data set includes the following 88 variables:
+
+ [1] activity                                                 
+ [2] subject                                                  
+ [3] timeBodyAccelerometerMeanXaxial                          
+ [4] timeBodyAccelerometerMeanYaxial                          
+ [5] timeBodyAccelerometerMeanZaxial                          
+ [6] timeBodyAccelerometerStdDevXaxial                        
+ [7] timeBodyAccelerometerStdDevYaxial                        
+ [8] timeBodyAccelerometerStdDevZaxial                        
+ [9] timeGravityAccelerometerMeanXaxial                       
+[10] timeGravityAccelerometerMeanYaxial                       
+[11] timeGravityAccelerometerMeanZaxial                       
+[12] timeGravityAccelerometerStdDevXaxial                     
+[13] timeGravityAccelerometerStdDevYaxial                     
+[14] timeGravityAccelerometerStdDevZaxial                     
+[15] timeBodyAccelerometerJerkMeanXaxial                      
+[16] timeBodyAccelerometerJerkMeanYaxial                      
+[17] timeBodyAccelerometerJerkMeanZaxial                      
+[18] timeBodyAccelerometerJerkStdDevXaxial                    
+[19] timeBodyAccelerometerJerkStdDevYaxial                    
+[20] timeBodyAccelerometerJerkStdDevZaxial                    
+[21] timeBodyGyroscopeMeanXaxial                              
+[22] timeBodyGyroscopeMeanYaxial                              
+[23] timeBodyGyroscopeMeanZaxial                              
+[24] timeBodyGyroscopeStdDevXaxial                            
+[25] timeBodyGyroscopeStdDevYaxial                            
+[26] timeBodyGyroscopeStdDevZaxial                            
+[27] timeBodyGyroscopeJerkMeanXaxial                          
+[28] timeBodyGyroscopeJerkMeanYaxial                          
+[29] timeBodyGyroscopeJerkMeanZaxial                          
+[30] timeBodyGyroscopeJerkStdDevXaxial                        
+[31] timeBodyGyroscopeJerkStdDevYaxial                        
+[32] timeBodyGyroscopeJerkStdDevZaxial                        
+[33] timeBodyAccelerometerMagntitudeMean                      
+[34] timeBodyAccelerometerMagntitudeStdDev                    
+[35] timeGravityAccelerometerMagntitudeMean                   
+[36] timeGravityAccelerometerMagntitudeStdDev                 
+[37] timeBodyAccelerometerJerkMagntitudeMean                  
+[38] timeBodyAccelerometerJerkMagntitudeStdDev                
+[39] timeBodyGyroscopeMagntitudeMean                          
+[40] timeBodyGyroscopeMagntitudeStdDev                        
+[41] timeBodyGyroscopeJerkMagntitudeMean                      
+[42] timeBodyGyroscopeJerkMagntitudeStdDev                    
+[43] frequencyBodyAccelerometerMeanXaxial                     
+[44] frequencyBodyAccelerometerMeanYaxial                     
+[45] frequencyBodyAccelerometerMeanZaxial                     
+[46] frequencyBodyAccelerometerStdDevXaxial                   
+[47] frequencyBodyAccelerometerStdDevYaxial                   
+[48] frequencyBodyAccelerometerStdDevZaxial                   
+[49] frequencyBodyAccelerometerMeanFrequencyXaxial            
+[50] frequencyBodyAccelerometerMeanFrequencyYaxial            
+[51] frequencyBodyAccelerometerMeanFrequencyZaxial            
+[52] frequencyBodyAccelerometerJerkMeanXaxial                 
+[53] frequencyBodyAccelerometerJerkMeanYaxial                 
+[54] frequencyBodyAccelerometerJerkMeanZaxial                 
+[55] frequencyBodyAccelerometerJerkStdDevXaxial               
+[56] frequencyBodyAccelerometerJerkStdDevYaxial               
+[57] frequencyBodyAccelerometerJerkStdDevZaxial               
+[58] frequencyBodyAccelerometerJerkMeanFrequencyXaxial        
+[59] frequencyBodyAccelerometerJerkMeanFrequencyYaxial        
+[60] frequencyBodyAccelerometerJerkMeanFrequencyZaxial        
+[61] frequencyBodyGyroscopeMeanXaxial                         
+[62] frequencyBodyGyroscopeMeanYaxial                         
+[63] frequencyBodyGyroscopeMeanZaxial                         
+[64] frequencyBodyGyroscopeStdDevXaxial                       
+[65] frequencyBodyGyroscopeStdDevYaxial                       
+[66] frequencyBodyGyroscopeStdDevZaxial                       
+[67] frequencyBodyGyroscopeMeanFrequencyXaxial                
+[68] frequencyBodyGyroscopeMeanFrequencyYaxial                
+[69] frequencyBodyGyroscopeMeanFrequencyZaxial                
+[70] frequencyBodyAccelerometerMagntitudeMean                 
+[71] frequencyBodyAccelerometerMagntitudeStdDev               
+[72] frequencyBodyAccelerometerMagntitudeMeanFrequency        
+[73] frequencyBodyBodyAccelerometerJerkMagntitudeMean         
+[74] frequencyBodyBodyAccelerometerJerkMagntitudeStdDev       
+[75] frequencyBodyBodyAccelerometerJerkMagntitudeMeanFrequency
+[76] frequencyBodyBodyGyroscopeMagntitudeMean                 
+[77] frequencyBodyBodyGyroscopeMagntitudeStdDev               
+[78] frequencyBodyBodyGyroscopeMagntitudeMeanFrequency        
+[79] frequencyBodyBodyGyroscopeJerkMagntitudeMean             
+[80] frequencyBodyBodyGyroscopeJerkMagntitudeStdDev           
+[81] frequencyBodyBodyGyroscopeJerkMagntitudeMeanFrequency    
+[82] angleTimeBodyAccelerometerMeanGravity                    
+[83] angleTimeBodyAccelerometerJerkMeanGravityMean            
+[84] angleTimeBodyGyroscopeMeanGravityMean                    
+[85] angleTimeBodyGyroscopeJerkMeanGravityMean                
+[86] angleXaxialGravityMean                                   
+[87] angleYaxialGravityMean                                   
+[88] angleZaxialGravityMean              
