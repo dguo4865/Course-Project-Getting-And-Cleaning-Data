@@ -1,11 +1,14 @@
 ###
-### This is the script for the course project of Getting and Cleaning Data
+### This is the script for the course project of Getting and Cleaning Data.
+### It is used to creat a tidy data set that merges the original training and test data sets with 
+### descriptive column names. The tidy data set includes variables that are the average of each mean or
+### standard deviation variable in the original data set. They are averaged by factor activity and subject.
 ###
 
 # set current working directory
 setwd("C:/Guo/Coursera/Data Science/3. Data Cleaning/W4")
 
-# reading in common files
+# reading in activity label and feature files
 act_lbl <- read.table("./UCIData/activity_labels.txt", header=FALSE)
 feature <- read.table("./UCIData/features.txt", header=FALSE)
 
@@ -19,10 +22,10 @@ sub_test <- read.table("./UCIData/test/subject_test.txt", header=FALSE)
 x_test <- read.table("./UCIData/test/X_test.txt", header=FALSE)
 y_test <- read.table("./UCIData/test/y_test.txt", header=FALSE)
 
-# do something here to make column names more descriptive
+# get the column names
 col_names <- feature[, 2]
 
-# assign column names stored in feature to x_trn and x_test
+# assign column names to x_trn and x_test
 colnames(x_trn) <- col_names
 colnames(x_test) <- col_names
 
@@ -37,7 +40,7 @@ colnames(act_lbl) <- c("act_id", "activity")
 colnames(y_trn) <- c("act_id")
 colnames(y_test) <- c("act_id")
 
-# combine subject, label and dataset for training data set and test data set, respectively
+# combine subject, label and datasets for training and test data sets, respectively
 ds_trn <- cbind(sub_trn, y_trn, x_trn)
 ds_test <- cbind(sub_test, y_test, x_test)
 
@@ -47,7 +50,7 @@ ds_comb <- rbind(ds_trn, ds_test)
 # a factor that indicates whether or not the variable is needed
 v_col_need <- grepl("mean|std|subject|act_id", tolower(colnames(ds_trn)))
 
-# create a data set that contains only the data that is needed
+# create a data set that contains only the columns that are needed
 ds_col_need <- ds_comb[v_col_need]
 
 # include activity name in the data set
@@ -56,9 +59,9 @@ ds_col_need <- merge(act_lbl, ds_col_need, all = FALSE)
 # drop column act_id
 ds_col_need <- ds_col_need[, -which(names(ds_col_need)=="act_id")]
 
+# clean column names in ds_col_need to make them more descriptive
 col_names <- colnames(ds_col_need)
 
-# clean column names in ds_col_need to make them more descriptive
 col_names <- gsub("^f", "frequency", col_names)
 col_names <- gsub("^t", "time", col_names)
 col_names <- gsub("[A|a]cc", "Accelerometer", col_names)
@@ -82,7 +85,3 @@ ds_mean <- aggregate(ds_col_need[, names(ds_col_need) != c("activity", "subject"
 
 # write ds_mean to a file
 write.table(ds_mean, "./tidy_data.txt", sep = " ", quote = FALSE, row.names = FALSE)
-
-# Retain data sets ds_col_need and ds_main. Clean other temporary data 
-rm(list=c("col_names", "v_col_need", "ds_comb", "ds_test", "ds_trn", "y_test", "x_test"))
-rm(list=c("sub_test", "y_trn", "x_trn", "sub_trn", "feature", "act_lbl"))
